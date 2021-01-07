@@ -3,5 +3,3 @@ function Car({ brand, model, price }) {
   this.model = model;
   this.price = price;
 }
-
-const { brand, model, price } = car;

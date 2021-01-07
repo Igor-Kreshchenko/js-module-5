@@ -1,11 +1,7 @@
 function Car(brand, model, price) {
-  const obj = {
-    brand,
-    model,
-    price,
-  };
-
-  return obj;
+  this.brand = brand;
+  this.model = model;
+  this.price = price;
 }
 
 const audi = new Car("Audi", "Q3", 36000);
