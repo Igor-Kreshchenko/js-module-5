@@ -13,8 +13,16 @@ class User {
     this.email = newEmail;
   }
 }
+
 class Admin extends User {
   // Пиши код ниже этой строки
+  static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+
+  accessLevel;
+
   blacklistedEmails = [];
 
   blacklist(email) {
@@ -24,13 +32,6 @@ class Admin extends User {
   isBlacklisted(email) {
     return this.blacklistedEmails.includes(email);
   }
-
-  static AccessLevel = {
-    BASIC: "basic",
-    SUPERUSER: "superuser",
-  };
-
-  accessLevel;
 
   constructor({ email, accessLevel }) {
     super(email);

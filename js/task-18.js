@@ -16,17 +16,17 @@ class User {
 
 class Admin extends User {
   // Пиши код ниже этой строки
-  accessLevel;
-
-  constructor({ email, accessLevel }) {
-    super(email);
-    this.accessLevel = accessLevel;
-  }
-
   static AccessLevel = {
     BASIC: "basic",
     SUPERUSER: "superuser",
   };
+
+  accessLevel;
+
+  constructor({ email, accessLevel }) {
+    super(email, accessLevel);
+    this.accessLevel = accessLevel;
+  }
 
   // Пиши код выше этой строки
 }
